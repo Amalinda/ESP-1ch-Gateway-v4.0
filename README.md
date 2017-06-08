@@ -1,4 +1,4 @@
-#Single Channel LoRaWAN Gateway
+# Single Channel LoRaWAN Gateway
 
 Version 4.0.2, January 29, 2017
 Author: M. Westenberg (mw12554@hotmail.com)
@@ -12,7 +12,7 @@ This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
 
-#description
+# Description
 
 This repository contains a proof-of-concept implementation of a single
 channel LoRaWAN gateway. It has been tested on the Wemos D1 Mini, using a 
@@ -22,7 +22,6 @@ HopeRF RFM95W transceiver.  The nodes tested are:
 - Arduino Pro-Mini (default Armega328 model, 8MHz 3.3V and 16MHz 3.3V)
 
 Maintained by Maarten Westenberg (mw12554@hotmail.com)
-
 
 ###Note
 
@@ -43,7 +42,7 @@ Version 3.0 includes WiFi Master support which makes it easy to use the 1-ch gat
 Version 4.0 includes CAD and Frequency Hopping spport and better web insterface allowing more parameters to be set over the web
 
 
-##Features
+# Features
 
 New features in version 4.0.0 (January 26, 2017)):
 
@@ -114,7 +113,7 @@ Not (yet) supported:
 - RX2 timeframe messages at frequency 869,525 MHz are not (yet) supported.
 - SF9-SF12 downlink messaging available but needs more testing
 
-##Dependencies
+# Dependencies
 
 The software is dependent on several pieces of software, the Ardiuino IDE for ESP8266 
 being the most important. Several other libraries are also used by this program, make sure you install those libraries with the IDE:
@@ -133,12 +132,12 @@ being the most important. Several other libraries are also used by this program,
 For convenience, the libraries are also found in this gitshub repository in the libraries directory. However, they are NOT part of the ESP 1channel gateway and may have their own licensing.
 However, these libraries are not part of the single-channel Gateway software.
 
-##Connections
+# Connections
 
 See http://things4u.github.io in the hardware section for building
 and connection instructions
 
-##Configuration
+# Configuration
 
 ###Connect to WiFI with WiFiManager
 
@@ -193,7 +192,7 @@ Make sure that you set:
   
 Edit .h file (ESP-sc-gway.h) to change configuration (look for: "Configure these values!").
 
-###Webserver
+# Webserver
 
 The built-in webserver can be used to display status and debugging information. It can be accessed with the following URL: http://YourGatewayIP:80 The webserver shows various configuration settings as well as providing functions to set parameters.
 
@@ -204,13 +203,13 @@ The following parameters can be set using the webServer.
 - When frequency Hoppin is off: Select the frequency the gateway will work on
 - When CAD mode is off: Select the Spreading Factor (SF) the gateway will work with
 
-## To DO
+# To-do
 The following things are still on my wish list to make to the single channel gateway:
 - Receive downstream message with commands form the server. These can be used to configure
   the gateway through downlink messages (such as setting the SF)
 - Repair the _loraSensor functions for use with TTN
 
-##Notes
+# Notes
 
 The Gateay timestamps are according to the LoRa specification: 
 - Receive_Delay1 1s
@@ -219,7 +218,7 @@ The Gateay timestamps are according to the LoRa specification:
 - Join_Accept_Delay2 6s
 
 
-##License
+# License
 
 The source files of the gateway sketch in this repository is made available under the MIT
 license. The libraries included in this repository are included for convenience only and all have their own license, and are not part of the ESP 1ch gateway code.
